@@ -1,0 +1,10 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "acidentes",
+            "database": "${workspaceFolder:graduation_projects}/cases/estagios/kogui/acidentes_database.sqlite"
+        }
+    ]
+}
