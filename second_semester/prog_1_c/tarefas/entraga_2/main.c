@@ -17,7 +17,8 @@ int main(void)
     printf("O segundo valor (%d) e o maior!", y);
   }
 
-  // 2 - Faça um programa que leia dois números e mostre o maior deles. Se, por acaso, os dois números forem iguais, imprima a mensagem “Números iguais”.
+  /* 2 - Faça um programa que leia dois números e mostre o maior deles. Se, por acaso, os dois números forem iguais, i
+  mprima a mensagem “Números iguais”.*/
 
   int a, b;
   printf("Digite 2 numeros: ");
@@ -50,9 +51,10 @@ int main(void)
     printf("O numero e impar");
   }
 
-  // 4 - Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre seu peso ideal, utilizando as seguintes fórmulas (em que “h” corresponde à altura):
-  // - Homens: (72,7 * h) – 58
-  // - Mulheres: (62,1 * h) – 44,7
+  /* 4 - Faça um programa que receba a altura e o sexo de uma pessoa e calcule e mostre seu peso ideal, utilizando as seguintes fórmulas
+  (em que “h” corresponde à altura):
+   - Homens: (72,7 * h) – 58.
+   - Mulheres: (62,1 * h) – 44,7.*/
 
   int d;
   float e, calculo;
@@ -129,7 +131,8 @@ int main(void)
     printf("O mes referente ao digito e Dezembro!");
   }
 
-  // 6 - Faça um programa que mostre ao usuário um menu com quatro opções de operações matemáticas (as operações básicas, por exemplo). O usuário escolhe uma das opções, e o seu programa pede dois valores numéricos e realiza a operação, mostrando o resultado.
+  /* 6 - Faça um programa que mostre ao usuário um menu com quatro opções de operações matemáticas (as operações básicas, por exemplo).
+  O usuário escolhe uma das opções, e o seu programa pede dois valores numéricos e realiza a operação, mostrando o resultado.*/
 
   int g, h, i, j;
 
