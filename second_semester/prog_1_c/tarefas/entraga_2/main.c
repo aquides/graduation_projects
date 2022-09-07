@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+int main()
 {
   // 1 - Faça um programa que leia dois números e mostre qual deles é o maior.
 
