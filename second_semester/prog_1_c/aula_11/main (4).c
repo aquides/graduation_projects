@@ -42,4 +42,8 @@ Operador "&" retorna o endereço de uma variável em hexadecimais
     Se modifica apenas as posições/endereços
     So se aplica a ponteireos que se tem controle do posicionamento dos dados na memmória
     Se se incrementa ponteiros inteiros, quer dizer que se está add 4 bits
+
+  MALOC armazena dados na HEAP, Ponteiro na STACK 
+
+  */
 }
