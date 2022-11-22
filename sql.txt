@@ -1,0 +1,68 @@
+Create table arquimedes_aluno
+(
+    matricula Integer NOT NULL ,
+    Constraint pk_arquimedes_aluno PRIMARY KEY (matricula)
+);
+
+
+insert into arquimedes_alunos
+VALUES (10000); 
+
+Create table arquimedes_aluno
+(
+    matricula Integer NOT NULL ,
+    Constraint pk_arquimedes_aluno PRIMARY KEY (matricula)
+);
+
+
+insert into arquimedes_aluno
+VALUES (10000); 
+
+
+drop table arquimedes_aluno
+
+
+Create table arquimedes_aluno
+(
+    matricula Integer NOT NULL ,
+    nome varchar (75) NOT NULL,
+    idade smallint ,
+    cor_raca varchar (8) NOT NULL,
+    data_nascimento Date NOT NULL, 
+    Constraint pk_arquimedes_aluno PRIMARY KEY (matricula),
+    check (idade >= 0 and idade <= 120),
+    check ( data_nascimento >= '1899-12-31' and data_nascimento <= '2022-11-22')
+);
+
+insert into arquimedes_aluno 
+values (10000, 'Arquimedes Aquides', 19, 'negro', '2003-10-27');
+
+insert into arquimedes_aluno 
+values (024671, 'Robson Bson', 26, 'branco', '1996-09-03');
+
+insert into arquimedes_aluno 
+values (354987, 'geovana Rocha', 19, 'branco', '2003-08-18');
+
+insert into arquimedes_aluno 
+values (765901, 'Brandon Brandola', 25, 'pardo', '1998-10-16');
+
+insert into arquimedes_aluno 
+values (123876, 'Carlos Carluxo', 70, 'branco', '1952-01-27');
+
+
+create table disciplina_arquimedes
+( 
+	codigo_disciplina integer,
+	nome_disciplina varchar (75),
+	carga_horaria smallint,
+	Constraint pk_disciplina_arquimedes second KEY (codigo_disciplina)
+)
+
+create table aluno_disciplina_arquimedes - as 4 juntas formam PK
+( 
+	matricula integer, -- foreign key de alunos
+	codigo_disciplina integer, -- fk para disciplina
+	ano date,
+	periodo smallint
+	Constraint pk_aluno_disciplina_arquimedes second KEY (matricula)
+)
