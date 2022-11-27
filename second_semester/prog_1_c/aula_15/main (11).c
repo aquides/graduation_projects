@@ -5,6 +5,7 @@ struct atleta {
   int idade, altura;
 };
 
+/* 
 int q2(){
   char nome[100], esporte[75];
   int idade, altura;
@@ -24,7 +25,7 @@ int q2(){
     
     contador += 1;
   }
-}
+}   */
 
 
 int q3()
@@ -50,7 +51,7 @@ int q3()
     return 0;
 }
 int main(void){
-  q2();
-  q3;
+  //q2();ñ
+  q3();
   return 0;
 }
