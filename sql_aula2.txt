@@ -1,0 +1,87 @@
+--drop table arquimedes_aluno;
+--truncate arquimedes_aluno;
+-- CRIAÇÃO DA TABELA COM OS DADOS BASE DOS ESTUDANTES
+Create table arquimedes_aluno
+(
+    matricula_aluno Integer NOT NULL ,
+    nome varchar (75) NOT NULL,
+    idade smallint ,
+    cor_raca varchar (8) NOT NULL,
+    data_nascimento Date NOT NULL, 
+    Constraint pk_arquimedes_aluno PRIMARY KEY (matricula_aluno),
+    check (idade >= 0 and idade <= 120),
+    check ( data_nascimento >= '1899-12-31' and data_nascimento <= '2022-11-22')
+); -- check: Cria condição para os dados de certa coluna
+
+insert into arquimedes_aluno 
+values (10000, 'Arquimedes Aquides', 19, 'negro', '2003-10-27'),
+	   (024671, 'Robson Bson', 26, 'branco', '1996-09-03'),
+	   (354987, 'geovana Rocha', 19, 'branco', '2003-08-18'),
+	   (765901, 'Brandon Brandola', 25, 'pardo', '1998-10-16'),
+	   (123876, 'Carlos Carluxo', 70, 'branco', '1952-01-27');
+
+--insert into arquimedes_aluno 
+--values (10680, NULL , 19, 'negro', '2003-10-27'); -- Insere valor nulo 
+
+
+-- drop table arquimedes_disciplina;
+-- CRIAÇÃO TABELA COM AS DISCIPLINAS
+create table arquimedes_disciplina
+( 
+	codigo_disciplina integer NOT NULL,
+	nome_disciplina varchar (75),
+	carga_horaria smallint,
+	Constraint pk_arquimedes_disciplina Primary KEY (codigo_disciplina)
+);
+
+insert into arquimedes_disciplina 
+values (2651, 'iNTRODUCAO A ESTATISTICA', 60), (3291, 'iNFEENCIA ESTATISTICA', 60),
+	(9281, 'iNFERENCIA BAYESIANA', 120), (5498, 'REGRESSAO MULTIVARIADAS', 90);
+
+
+
+--drop table arquimedes_aluno_disciplina;
+--truncate arquimedes_aluno_disciplina;
+
+-- CRIAÇÃO TABELA DE ALUNOS
+create table arquimedes_aluno_disciplina -- as 4 juntas formam PK
+( 
+	matricula_aluno integer NOT NULL, -- foreign key de alunos
+	codigo_disciplina integer NOT NULL, -- fk para disciplina
+	ano smallint,
+	periodo smallint,
+	-- CRIAÇÃO CHAVES ESTRANGEIRAS, PRECISAM JÁ EXISTIR ter mesmo nome e tipo
+	Constraint pk_arquimedes_aluno_disciplina Primary KEY (matricula_aluno, codigo_disciplina, ano, periodo),
+	--SEMPRE se cria uma PK com todas as colunas importantes e só dps declara como chave estrangeira
+	Constraint fk_arquimedes_aluno_disciplina_codigo_disciplina Foreign KEY (matricula_aluno) references arquimedes_aluno(matricula_aluno),
+	Constraint fk_arquimedes_aluno_disciplina_arquimedes_codigo_disciplina Foreign KEY (codigo_disciplina) references arquimedes_disciplina(codigo_disciplina),
+	check(ano > 1990 and ano <= 2022)
+); -- FK = Foreign Key
+
+insert into arquimedes_aluno_disciplina 
+	values 
+		(10000, 2651, 2021, 2), (024671, 3291, 2022, 4), (354987, 2651, 2022, 2), 
+		(765901, 9281, 2022, 7),(123876, 3291, 2022, 4);
+
+-- USO DO DEFAULT
+	
+drop table arquimedes_disciplina_default;
+-- CRIAÇÃO TABELA COM AS DISCIPLINAS COM DEFAULT
+create table arquimedes_disciplina_default
+( 
+	codigo_disciplina2 integer NOT NULL,
+	nome_disciplina varchar (175),
+	carga_horaria smallint default(60), 
+	Constraint pk_arquimedes_disciplina_default Primary KEY (codigo_disciplina2)
+); -- cria um valor default para caso nenhum valor seja declarado
+
+insert into arquimedes_disciplina_default 
+values (2651, 'iNTRODUCAO A ESTATISTICA', 60), (3291, 'iNFEENCIA ESTATISTICA', 60),
+		(9281, 'iNFERENCIA BAYESIANA', 120), (5498, 'REGRESSAO MULTIVARIADAS', 90);
+insert into arquimedes_disciplina_default 
+values (3215, 'INTRODUCAO A CIENCIA DE DADOS');
+
+-- USO DO ALTER TABLE
+alter table arquimedes_disciplina_default
+	rename to arquimedes_disciplinas_default
+

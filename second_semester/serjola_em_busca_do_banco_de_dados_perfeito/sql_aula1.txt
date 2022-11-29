@@ -24,7 +24,7 @@ drop table arquimedes_aluno
 
 Create table arquimedes_aluno
 (
-    matricula Integer NOT NULL ,
+    matricula_aluno Integer NOT NULL ,
     nome varchar (75) NOT NULL,
     idade smallint ,
     cor_raca varchar (8) NOT NULL,
@@ -50,19 +50,23 @@ insert into arquimedes_aluno
 values (123876, 'Carlos Carluxo', 70, 'branco', '1952-01-27');
 
 
-create table disciplina_arquimedes
+-- CRIAÇÃO TABELA COM AS DISCIPLINAS
+create table arquimedes_disciplina
 ( 
-	codigo_disciplina integer,
+	codigo_disciplina integer NOT NULL,
 	nome_disciplina varchar (75),
 	carga_horaria smallint,
-	Constraint pk_disciplina_arquimedes second KEY (codigo_disciplina)
-)
+	Constraint pk_arquimedes_disciplina Primary KEY (codigo_disciplina)
+);
 
-create table aluno_disciplina_arquimedes - as 4 juntas formam PK
+-- CRIAÇÃO TABELA DE ALUNOS
+create table arquimedes_aluno_disciplina -- as 4 juntas formam PK
 ( 
-	matricula integer, -- foreign key de alunos
-	codigo_disciplina integer, -- fk para disciplina
+	matricula_aluno integer NOT NULL, -- foreign key de alunos
+	codigo_disciplina integer NOT NULL, -- fk para disciplina
 	ano date,
-	periodo smallint
-	Constraint pk_aluno_disciplina_arquimedes second KEY (matricula)
-)
+	periodo smallint,
+	Constraint pk_arquimedes_aluno_disciplina Primary KEY (matricula_aluno)
+);
+
+
