@@ -1,0 +1,69 @@
+COLUNAS DOS ARQUIVOS .CSV
+
+
+DF - 1 TURNO
+
+Name				Type		Length	Format	Informat
+ANO_ELEICAO		Numeric	8		BEST4.	BEST4.	
+NR_TURNO			Numeric	8		BEST1.	BEST1.	
+SG_UF			Character	2		$CHAR2.	$CHAR2.	
+SG_UE			Character	2		$CHAR2.	$CHAR2.	
+NM_UE			Character	16		$CHAR16.	$CHAR16.	
+CD_MUNICIPIO		Numeric	8		BEST5.	BEST5.	
+NM_MUNICIPIO		Character	8		$CHAR8.	$CHAR8.	
+NR_ZONA			Numeric	8		BEST2.	BEST2.	
+NR_SECAO			Numeric	8		BEST4.	BEST4.	
+CD_CARGO			Numeric	8		BEST1.	BEST1.	
+DS_CARGO			Character	18		$CHAR18.	$CHAR18.	
+NR_VOTAVEL		Numeric	8		BEST5.	BEST5.	
+NM_VOTAVEL		Character	57		$CHAR57.	$CHAR57.	
+NR_LOCAL_VOTACAO	Numeric	8		BEST4.	BEST4.	
+SQ_CANDIDATO		Numeric	8		BEST11.	BEST11.	
+QT_VOTOS			Numeric	8		BEST3.	BEST3.	
+
+
+PRESIDENTE - 1 TURNO
+
+Name				Type		Length	Format	Informat
+ANO_ELEICAO		Character	6		$6.		$6.	
+NR_TURNO			Character	3		$3.		$3.	
+DT_ELEICAO		Character	12		$12.		$12.	
+SG_UF			Character	4		$4.		$4.	
+SG_UE			Character	4		$4.		$4.	
+NM_UE			Character	8		$8.		$8.	
+CD_MUNICIPIO		Character	7		$7.		$7.	
+NM_MUNICIPIO		Character	26		$26.		$26.	
+NR_ZONA			Character	5		$5.		$5.	
+NR_SECAO			Character	5		$5.		$5.	
+CD_CARGO			Character	3		$3.		$3.	
+DS_CARGO			Character	12		$12.		$12.	
+NR_VOTAVEL		Character	4		$4.		$4.	
+NM_VOTAVEL		Character	21		$21.		$21.	
+NR_LOCAL_VOTACAO	Character	6		$6.		$6.	
+SQ_CANDIDATO		Character	14		$14.		$14.	
+QT_Votos			Numeric	8			
+
+
+PRESIDENTE - 2 TURNO
+
+Name				Type		Length	Format	Informat
+ANO_ELEICAO		Numeric	8		BEST4.	BEST4.	
+NR_TURNO			Numeric	8		BEST1.	BEST1.	
+DT_ELEICAO		Date		8		DDMMYY10.	DDMMYY10.	
+SG_UF			Character	2		$CHAR2.	$CHAR2.	
+SG_UE			Character	2		$CHAR2.	$CHAR2.	
+NM_UE			Character	6		$CHAR6.	$CHAR6.	
+CD_MUNICIPIO		Numeric	8		BEST5.	BEST5.	
+NM_MUNICIPIO		Character	32		$CHAR32.	$CHAR32.	
+NR_ZONA			Numeric	8		BEST3.	BEST3.	
+NR_SECAO			Numeric	8		BEST4.	BEST4.	
+CD_CARGO			Numeric	8		BEST1.	BEST1.	
+DS_CARGO			Character	10		$CHAR10.	$CHAR10.	
+NR_VOTAVEL		Numeric	8		BEST2.	BEST2.	
+NM_VOTAVEL		Character	35		$CHAR35.	$CHAR35.	
+NR_LOCAL_VOTACAO	Numeric	8		BEST4.	BEST4.	
+SQ_CANDIDATO		Numeric	8		BEST12.	BEST12.	
+QT_VOTOS			Numeric	8		BEST3.	BEST3.	
+
+
+
