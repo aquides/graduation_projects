@@ -1,0 +1,11 @@
+product_id,product_name,price,weight_mg_or_ml,color,product_validity_days,sortmeant,description
+29,banana_unitaria,0.95,nao_aplicavel,amarelo,4,300,Bananas bananosas sabor banana
+34,amaciante,27.99,1.000,nao_aplicavel,720,0,nao_aplicavel
+11,feijao_enlatado,3.98,300,nao_aplicavel,5.475,55,feijao feijoosos sabor feijao
+79,caixa_de_uva,"44.692,00",450,roxa,5,5,
+74,sabao_liquido,23.0,275,nao_aplicavel,720,73,nao_aplicavel
+31,sardinha_enlatada,7.98,300,nao_aplicavel,1.825,0,bixo morto enlatado com alto teor de conservantes cancerigenos
+55,aparador_de_grama,"775,00",4.750,verde,nao_aplicavel,15,barbeiro de mato portatil 
+4,sabao_em_po,9.99,600,nao_aplicavel,720,102,nao_aplicavel
+1,pessegos_enlatados,"44.695,00",125,nao_aplicavel,1.095,23,nao_aplicavel
+35,regador,nao_aplicavel,80,preto,nao_aplicavel,3,regador  com bico de dispersão ajustavel
